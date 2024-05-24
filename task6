@@ -1,0 +1,13 @@
+my_list = ['dog', 'cat', 'parrot', ' cow', 'rabbit','frog']
+print(my_list )
+print(my_list[0], my_list[-1] )
+print(my_list[3:6])
+my_list[2] = 'hourse'
+print(my_list) #Задание1, в 3ем подпункте не поняла, включать 5й элемент или нет, тут включила, если он все-таки не нужен в подсписке, то вместо 6 нужно написать 5
+
+my_dict = {'dog' : 'woof', 'cat' : 'meow', 'parrot': 'chirp' , ' cow': 'moo', 'rabbit' : 'shh','frog': 'croak'}
+print(my_dict )
+print(my_dict['cat'])
+my_dict['parrot'] = 'chiric'
+print(my_dict) #Задание2
+
