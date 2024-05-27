@@ -1,0 +1,14 @@
+first = float(input('введите 1 число'))
+second = float(input('введите 2 число'))
+third = float(input('введите 3 число'))
+if first == second and second == third:
+    print('3')
+else :
+    print('0')
+first1 = float(input('введите 1 число'))
+second2 = float(input('введите 2 число'))
+third3 = float(input('введите 3 число'))
+if first1 == second2 or second2 == third3 or first1 == third3:
+    print('2')
+else :
+    print('0')
