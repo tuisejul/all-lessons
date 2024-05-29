@@ -1,0 +1,12 @@
+def get_matrix(n, m, value):
+    matrix = []
+    for i in range(n):
+        m1 = []
+        matrix.append(m1)
+        for j in range(m):
+            m1.append(value)
+    return matrix
+res1 = get_matrix(3, 3, 0)
+res2 = get_matrix(3, 4, 5)
+print(res1)
+print(res2)
