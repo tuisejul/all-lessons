@@ -1,0 +1,27 @@
+class Vehicle:
+    def __init__(self, vehicle_type = 'none'):
+        self.vehicle_type = vehicle_type
+
+class Car:
+    def __init__(self, price = 1000000, horse_power = 0):
+        self.price = price
+        self.horse_power = horse_power
+
+    def horse_powers(self):
+        return self.horse_power
+
+class Nissan(Vehicle, Car):
+    def __init__(self):
+        self.vehicle_type = 'Nissan'
+        self.price = 1000000
+
+    def __str__(self):
+        return (f' Тип автомобиля: {self.vehicle_type}, Цена: {self.price}')
+
+    def horse_powers(self):
+        self.horse_power = 100
+        return self.horse_power
+
+Nissan = Nissan()
+print(Nissan)
+print(Nissan.horse_powers())
