@@ -1,0 +1,22 @@
+def custom_write(file_name, strings):
+    number_string = 0
+    string_position = {}
+    with open(file_name, mode = 'a', encoding='utf-8') as file:
+        for string in strings:
+            position_now = file.tell()
+            dictionary = (number_string, position_now)
+            string_position[dictionary] = string
+            number_string =+ 1
+            file.write(string + '\n')
+    return string_position
+
+info = [
+    'Text for tell.',
+    'Используйте кодировку utf-8.',
+    'Because there are 2 languages!',
+    'Спасибо!'
+    ]
+
+result = custom_write('test.txt', info)
+for elem in result.items():
+  print(elem)
