@@ -5,13 +5,14 @@ def personal_sum(numbers):
         try:
             result += number
         except TypeError:
+            incorrect_data += 1
             print(f'некорректный тип данных - {number}')
     return result, incorrect_data
 
 def calculate_average(numbers):
     try:
         result, incorrect_data = personal_sum(numbers)
-        average_number = result / len((numbers) - incorrect_data)
+        average_number = result / (len(numbers) - incorrect_data)
     except ZeroDivisionError:
         average_number = 0
     except TypeError:
