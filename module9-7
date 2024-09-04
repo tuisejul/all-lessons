@@ -5,30 +5,6 @@ def is_prime(func):
         sum_numbers = func(*args)
         k = 0
         for i in range(2, sum_numbers // 2 +1):
-            if sum_numbers % 1 == 0:
-                k = k + 1
-                break
-        if (k <= 0):
-            print('простое')
-        else:
-            print('составное')
-        return sum_numbers
-    return wrapper
-
-@is_prime
-def sum_three(*args):
-    numbers_list = list(args)
-    sum = reduce((lambda x, y: x + y), numbers_list)
-    return sum
-
-result = sum_three(2, 3, 6)
-print(result)from functools import reduce
-
-def is_prime(func):
-    def wrapper(*args):
-        sum_numbers = func(*args)
-        k = 0
-        for i in range(2, sum_numbers // 2 +1):
             if sum_numbers % i == 0:
                 k = k + 1
                 break
