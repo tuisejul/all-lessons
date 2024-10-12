@@ -1,0 +1,17 @@
+import requests
+
+url = 'https://yandex.ru'
+
+response = requests.get(url)
+
+if response.status_code == 200:
+    data = response.url
+    print(f'Статус ответа: ОК [код 200] по URL = {data}')
+    response.encoding = 'utf-8'
+    content = response.content
+    print(f'Содержание :{content}')
+    headers = response.headers
+    print(f'Заголовки :{headers}')
+
+else:
+    print('Ошибка при выполнении запроса')
